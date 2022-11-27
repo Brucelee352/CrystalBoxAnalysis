@@ -1,0 +1,55 @@
+,Species,Gender,Type1,Type2,Move1,Move2,Move3,Move4,HP,ATK,DEF,SPA,SPD,SPE,OT,HP_IV,ATK_IV,DEF_IV,SPD_IV,SPE_IV,EXP,Level,HP_EV,ATK_EV,DEF_EV,SPA_EV,SPD_EV,SPE_EV,IsNicknamed
+1,Goldeen,F,Water,NA,Peck,Tail Whip,(None),(None),20,11,12,11,11,12,RED,12,1,13,10,8,125,5,0,0,0,0,0,0,FALSE
+2,Doduo,M,Normal,Flying,Peck,Growl,Fury Attack,(None),54,49,28,29,29,45,RED,7,8,3,15,9,13824,24,0,0,0,0,0,0,FALSE
+3,Machop,M,Fighting,NA,Karate Chop,(None),(None),(None),53,38,25,17,17,18,RED,0,12,6,0,2,3798,18,0,0,0,0,0,0,FALSE
+4,Drowzee,F,Psychic,NA,Pound,Hypnosis,Disable,(None),46,20,21,32,32,20,RED,12,5,11,0,8,3375,15,0,0,0,0,0,0,FALSE
+5,Squirtle,M,Water,NA,Tackle,Tail Whip,Bubble,(None),31,17,21,18,18,16,RED,15,15,15,15,15,560,10,0,0,0,0,0,0,FALSE
+6,Abra,M,Psychic,NA,Teleport,(None),(None),(None),22,8,7,20,20,19,RED,12,7,5,8,14,236,7,0,0,0,0,0,0,FALSE
+7,Diglett,M,Ground,NA,Scratch,Growl,(None),(None),31,26,14,22,22,37,RED,8,11,6,10,6,4096,16,0,0,0,0,0,0,FALSE
+8,Rattata,M,Normal,NA,Tackle,Tail Whip,Quick Attack,(None),31,21,16,14,14,25,RED,10,13,14,14,13,1728,12,0,0,0,0,0,0,FALSE
+9,Paras,F,Bug,Grass,Scratch,Stun Spore,(None),(None),32,23,22,20,20,14,RED,0,0,14,4,10,2197,13,0,0,0,0,0,0,FALSE
+10,Mankey,M,Fighting,NA,Scratch,Leer,(None),(None),16,10,7,7,7,10,RED,12,15,3,12,14,27,3,0,0,0,0,0,0,FALSE
+11,Sandshrew,M,Ground,NA,Scratch,Sand Attack,(None),(None),32,21,22,12,12,15,RED,12,9,3,6,10,1000,10,0,0,0,0,0,0,FALSE
+12,Spearow,M,Normal,Flying,Peck,Growl,Leer,(None),30,21,12,14,14,22,RED,5,14,3,11,8,1331,11,0,0,0,0,0,0,FALSE
+13,Zubat,M,Poison,Flying,Leech Life,(None),(None),(None),26,15,13,14,14,16,RED,1,14,12,13,8,729,9,0,0,0,0,0,0,FALSE
+14,Geodude,F,Rock,Ground,Tackle,(None),(None),(None),29,22,26,12,12,10,RED,5,6,7,9,8,560,10,0,0,0,0,0,0,FALSE
+15,Wigglytuff,F,Normal,NA,Sing,(None),(None),(None),30,12,10,10,10,9,RED,13,1,13,5,0,100,5,0,0,0,0,0,0,FALSE
+16,Oddish,M,Grass,Poison,Absorb,(None),(None),(None),35,20,21,26,26,15,RED,13,15,13,15,14,973,12,0,0,0,0,0,0,FALSE
+17,Butterfree,F,Bug,Flying,Stun Spore,Sleep Powder,Flash,Confusion,52,22,28,36,36,32,RED,10,1,12,8,5,5551,17,1984,2413,2422,1652,1652,2251,FALSE
+18,Voltorb,-,Electric,NA,Tackle,Screech,Sonic Boom,(None),49,20,28,30,30,48,TIM,8,9,8,8,8,8000,20,0,0,0,0,0,0,TRUE
+19,Machop,M,Fighting,NA,Low Kick,Leer,Focus Energy,Karate Chop,48,30,21,19,19,16,SILVER,8,5,6,12,4,2035,15,0,0,0,0,0,0,FALSE
+20,Krabby,F,Water,NA,Bubble,Leer,Vise Grip,Guillotine,54,60,57,20,20,34,RED,9,5,14,5,8,15625,25,0,0,0,0,0,0,FALSE
+21,Muk,M,Poison,NA,Pound,Disable,Poison Gas,Minimize,127,87,66,58,58,41,RED,13,13,13,11,2,42875,35,0,0,0,0,0,0,FALSE
+22,Lapras,M,Water,Ice,Surf,Body Slam,Mist,Sing,127,65,62,71,71,50,RED,15,15,15,15,15,33750,30,0,0,0,0,0,0,FALSE
+23,Slowpoke,M,Water,Psychic,Confusion,(None),(None),(None),53,28,24,21,21,11,RED,4,12,1,14,6,3375,15,0,0,0,0,0,0,FALSE
+24,Venonat,F,Bug,Poison,Disable,Supersonic,Confusion,Poison Powder,67,34,29,28,28,33,RED,9,7,2,9,14,13824,24,0,0,0,0,0,0,FALSE
+25,Rhyhorn,F,Rock,Ground,Horn Attack,(None),(None),(None),79,50,54,23,23,18,RED,8,5,4,6,2,19531,25,0,0,0,0,0,0,FALSE
+26,Nidorina,F,Poison,NA,Scratch,Double Kick,Poison Sting,Tail Whip,92,49,55,45,45,43,RED,9,7,12,9,4,27021,32,0,0,0,0,0,0,FALSE
+27,Exeggcute,M,Grass,Psychic,Barrage,Hypnosis,(None),(None),58,28,44,33,33,28,RED,0,14,10,4,14,13310,22,0,0,0,0,0,0,FALSE
+28,Chansey,F,Normal,NA,Pound,Tail Whip,Double Slap,(None),141,7,11,52,52,26,RED,12,1,11,8,0,7408,21,0,0,0,0,0,0,FALSE
+29,Dratini,F,Dragon,NA,Wrap,Leer,Thunder Wave,(None),31,18,15,15,15,15,RED,14,5,7,0,3,1250,10,0,0,0,0,0,0,FALSE
+30,Ponyta,M,Fire,NA,Ember,Tail Whip,(None),(None),75,63,41,50,50,60,RED,9,13,6,11,2,27000,30,0,0,0,0,0,0,FALSE
+31,Horsea,F,Water,NA,Bubble,Smokescreen,(None),(None),42,21,34,36,36,32,RED,0,2,4,8,8,8000,20,0,0,0,0,0,0,FALSE
+32,Haunter,M,Ghost,Poison,Lick,Confuse Ray,Night Shade,(None),66,39,31,70,70,62,RED,10,13,4,6,11,15244,27,0,0,0,0,0,0,FALSE
+33,Charizard,M,Fire,Flying,Slash,Fly,Flamethrower,Swords Dance,165,115,101,118,118,133,RED,15,15,7,15,15,117360,50,10292,8840,8405,11127,11127,10744,FALSE
+34,Snorlax,M,Normal,NA,Body Slam,Earthquake,Hyper Beam,Self-Destruct,243,140,93,93,93,53,RED,15,15,15,15,9,156250,50,4222,7283,4378,4848,4848,5267,FALSE
+35,Dugtrio,M,Ground,NA,Slash,Earthquake,Fissure,Sand Attack,121,112,79,93,93,150,RED,15,15,15,9,15,125000,50,8003,9394,5619,5851,5851,6614,FALSE
+36,Jigglypuff,F,Normal,NA,Sing,Defense Curl,Pound,(None),52,16,11,12,12,10,SILVER,14,1,9,6,1,1382,12,0,0,0,0,0,0,FALSE
+37,Farfetch’d,M,Normal,Flying,Peck,Sand Attack,Leer,(None),47,29,22,27,27,29,SILVER,15,13,1,13,15,4096,16,0,0,0,0,0,0,FALSE
+38,Meowth,F,Normal,NA,Scratch,Growl,Bite,(None),43,21,21,22,22,37,SILVER,15,7,15,15,13,4096,16,0,0,0,0,0,0,FALSE
+39,Moltres,-,Fire,Flying,Peck,Fire Spin,(None),(None),161,116,103,141,141,100,RED,11,11,8,11,5,156250,50,0,0,0,0,0,0,FALSE
+40,Onix,F,Rock,Ground,Rock Throw,Rage,Slam,Harden,94,53,167,41,41,85,RED,1,4,6,7,12,117649,49,0,0,0,0,0,0,FALSE
+41,Poliwhirl,M,Water,NA,Hypnosis,Water Gun,Double Slap,Body Slam,114,69,65,52,52,82,RED,15,15,11,9,7,56660,40,0,0,0,0,0,0,FALSE
+42,Magneton,-,Electric,NA,Tackle,Sonic Boom,Thunder Shock,Supersonic,81,51,67,86,86,52,RED,8,11,0,4,2,35937,33,0,0,0,0,0,0,FALSE
+43,Articuno,-,Ice,Flying,Peck,Ice Beam,(None),(None),159,95,109,135,135,94,RED,9,5,4,5,4,156250,50,0,0,0,0,0,0,FALSE
+44,Seel,F,Water,NA,Headbutt,(None),(None),(None),75,31,39,45,45,36,RED,2,2,6,2,11,21952,28,0,0,0,0,0,0,FALSE
+45,Ditto,-,Normal,NA,Transform,(None),(None),(None),64,30,33,30,30,34,RED,15,5,11,5,13,13824,24,0,0,0,0,0,0,FALSE
+46,Growlithe,M,Fire,NA,Roar,Ember,Leer,Take Down,82,50,35,42,42,45,RED,15,5,5,13,7,33750,30,0,0,0,0,0,0,FALSE
+47,Kabutops,M,Water,Rock,Scratch,Harden,Absorb,Slash,107,107,91,61,61,72,RED,12,13,3,0,4,64000,40,0,0,0,0,0,0,FALSE
+48,Omastar,M,Water,Rock,Water Gun,Withdraw,Horn Attack,Leer,120,66,119,111,111,62,RED,15,15,15,15,15,68921,41,0,0,0,0,0,0,FALSE
+49,Electrode,-,Electric,NA,Sonic Boom,Self-Destruct,Light Screen,Swift,101,54,70,78,78,122,RED,2,10,10,10,3,68921,41,0,0,0,0,0,0,FALSE
+50,Bellsprout,F,Grass,Poison,Vine Whip,Growth,Cut,(None),34,23,15,21,21,17,RED,0,0,8,0,10,973,12,0,0,0,0,0,0,FALSE
+51,Marowak,M,Ground,NA,Bone Club,Tail Whip,Headbutt,Strength,65,50,62,33,33,30,RED,5,14,9,9,8,13824,24,0,0,0,0,0,0,FALSE
+52,Clefable,M,Normal,NA,Ice Beam,Metronome,Sing,Body Slam,176,97,100,112,112,87,RED,15,15,15,15,15,100000,50,2839,3570,3628,3061,3061,3317,FALSE
+53,Pikachu,M,Electric,NA,Thunderbolt,Surf,Agility,Thunder,146,93,66,89,89,130,RED,15,15,15,15,15,140608,52,65535,14312,12484,17216,17216,16295,FALSE
+54,Gyarados,M,Water,Flying,Dragon Rage,Leer,Bite,Surf,186,161,117,134,134,120,RED,15,15,15,15,15,165813,51,11912,11695,16707,9697,9697,18455,FALSE
