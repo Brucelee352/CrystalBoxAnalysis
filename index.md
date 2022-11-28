@@ -417,7 +417,7 @@ In fact if Gen 2 had an endgame boss that wasn't Pkmn Trainer Red (...!), I coul
 
 ## One variable, discrete variables
 
-```{r warning=FALSE}
+```{r echo=FALSE}
 ggplot(CrystalBox, aes(y = Gender, fill = OT)) + 
    geom_bar() + 
    xlim(0,10) +
@@ -426,7 +426,8 @@ ggplot(CrystalBox, aes(y = Gender, fill = OT)) +
    ggtitle("Gender of Pokémon by Type & Original Trainer") +
    theme_light() +
    facet_wrap(Type1 ~ .)
-
+   
+![Gender by Type and OT](/brucelee352.github.io/assets/images/unnamed-chunk-30-1.png)
 
 ggplot(CrystalBox, aes(y = HeldItem, fill = OT)) +
          geom_bar() + 
