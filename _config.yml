@@ -1,4 +1,4 @@
 name: "Pokemon Crystal Box Analysis"
 description: "A breakdown and analysis of my Crystal box data"
 url: "brucelee352.github.io"
-markdown: "kramdown"
+markdown: "GFM"
