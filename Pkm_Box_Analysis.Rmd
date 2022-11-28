@@ -555,7 +555,7 @@ ggplot(CrystalBox, aes(x = HP, y = SPA, size = Level)) +
                                  linewidth = 1, linetype = "solid")) 
 ```
 
--   
+...
 
 ### Different graphs showing correlation between offensive stats and speed
 
