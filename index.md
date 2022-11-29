@@ -18,7 +18,9 @@ As an avid player of the Pokémon franchise of games since childhood. I pondered
 
 Having played through the Gen 2 games (think Gold, Silver and Crystal)-I wanted to do a project that analyzed trends on the Pokémon in my storage boxes.
 
-As I journeyed around the Johto and Kanto regions, even back in the early days. I became entrenched in a never-ending journey.
+As such, you might wonder. What does an analysis about Pokémon have to do with making analyses concerning business data? 
+
+Well, having the skill to break down data as a means to visualize it and tell the story of what you've discovered is key. This is the story of my journey as a Pokémon trainer. 
 
 ## Starting the EDA process
 
@@ -413,11 +415,14 @@ In fact if Gen 2 had an endgame boss that wasn't Pkmn Trainer Red (...!), I coul
 
 # Example Data Visualizations
 
-> This section is going to outline all of the visualizations I can think of that can give further context to the data we have on hand. While also giving insight to the line of thinking needed to ascertain what visualization method is best suited for a given use case.
+> This section is going to outline all of the visualizations I can think of that can give further context to the data we have on hand. While also giving insight to the line of thinking needed to ascertain what visualization method is best suited for a given use case. 
+
+> Here, I'm laying out the code I used to generate the plot, along with the rendered chart. 
 
 ## One variable, discrete variables
 
-![Gender by Type and OT](/brucelee352.github.io/assets/images/unnamed-chunk-30-1.png)
+**For example:**
+
 ```{r echo=FALSE}
 ggplot(CrystalBox, aes(y = Gender, fill = OT)) + 
    geom_bar() + 
@@ -427,23 +432,42 @@ ggplot(CrystalBox, aes(y = Gender, fill = OT)) +
    ggtitle("Gender of Pokémon by Type & Original Trainer") +
    theme_light() +
    facet_wrap(Type1 ~ .)
-  
+```
+**Gives us..**
 
+![Gender by Type and OT](docs/assets/images/Gender_type_OT.png?raw=true "Title")
+
+...
+
+
+```{r echo=FALSE}
 ggplot(CrystalBox, aes(y = HeldItem, fill = OT)) +
          geom_bar() + 
-  ggtitle("Held Items by Sex & Original Trainer") +
+  ggtitle("Held Items by Gender & Original Trainer") +
   xlab("Count") +
   ylab("Item") +
   facet_wrap(Gender ~ .)
+```
 
+![Held Items by Gender & OT](docs/assets/images/Items_byGender_OT.png?raw=true "Title")
+
+...
+
+```{r echo=FALSE}
 ggplot(CrystalBox, aes(x = Gender, fill = OT)) + 
   geom_bar() +
   ggtitle("# of Pokémon by Sex and Original Trainer") + 
   xlab("Sex") +
   ylab("Count")
+  ```
 
-#One variable, continuous
+![# of Pokémon by Sex & OT](docs/assets/images/unnamed-chunk-30-3.png?raw=true "Title")
 
+...
+
+## One variable, continuous
+
+```{r echo=FALSE}
 ggplot(CrystalBox, aes(x = Level, fill = Gender)) + 
   geom_histogram(bins = 5, position = "stack") + 
   ggtitle("Count of Pokémon by Level, Original Trainer & Gender", 
@@ -453,6 +477,8 @@ ggplot(CrystalBox, aes(x = Level, fill = Gender)) +
         axis.text.y = element_text(angle = 0)) +
   facet_grid(cols = vars(OT))
 ```
+
+![Count of Pokémon by Level, OT and Gender](docs/assets/images/Counts_Lvl_OT_Gender.png?raw=true "Title")
 
 ...
 
@@ -465,8 +491,12 @@ ggplot(CrystalBox, aes(x = OT, y = Level, color = EXP)) + geom_count() +
           subtitle = "w/ Experience Points") +
   xlab("Original Trainer") +
   theme_minimal() 
+```
 
-#Ver. 2 — Using Facet Wrap
+![Level of Pokémon by OT, Version 1](docs/assets/images/unnamed-chunk-31-1.png?raw=true "Title")
+
+```{r warning=FALSE}
+#Using Facet Wrap
 gender.labs <- c("Genderless", "Male", "Female")
 names(gender.labs) <- c("Genderless", "M", "F")
 ggplot(CrystalBox, aes(x = Level, y = OT, color = EXP)) + geom_count() +
@@ -476,7 +506,12 @@ ggplot(CrystalBox, aes(x = Level, y = OT, color = EXP)) + geom_count() +
   ylab("Original Trainer") +
   theme_linedraw() +
   facet_wrap(Gender ~ ., labeller = labeller(Gender = gender.labs))
+```  
+![Level of Pokémon by OT, Version 2](docs/assets/images/unnamed-chunk-31-2.png?raw=true "Title")
 
+...
+
+```{r warning=FALSE}
 ggplot(CrystalBox, aes(x = Level, y = ..density.., fill = OT)) + 
   geom_histogram(bins = 6) + 
   geom_density(kernel = "gaussian") +
@@ -485,7 +520,10 @@ ggplot(CrystalBox, aes(x = Level, y = ..density.., fill = OT)) +
   xlab("Level") +
   ylab("Density") +
   theme_light()
+ ```
+ ![Pokémon Levels & Density by OT](docs/assets/images/unnamed-chunk-31-3.png?raw=true "Title")
 
+```{r warning=FALSE}
 ggplot(CrystalBox, aes(x = StatTotals, y = after_stat(density), fill = OT)) + 
   geom_histogram(bins = 6) + 
   geom_density(kernel = "gaussian") +
@@ -498,9 +536,11 @@ ggplot(CrystalBox, aes(x = StatTotals, y = after_stat(density), fill = OT)) +
   xlab("Total Stats") +
   ylab("Density") +
   theme_light()
-```
+ ```
+ ![Pokémon Total Stats & Density by OT](docs/assets/images/unnamed-chunk-31-4.png?raw=true "Title")
 
 ...
+
 
 ## Sample violin plot, with quantiles.
 
@@ -512,7 +552,8 @@ ggplot(CrystalBox, aes(x = Level, y = StatTotals)) +
   ggtitle("Stat Totals by Level") +
   coord_flip()
 ```
-
+ ![Total Stats by Level](docs/assets/images/unnamed-chunk-32-1.png?raw=true "Title")
+ 
 ...
 
 ## Line graphs showing correlation between Hit points and offensive stats by level
@@ -534,8 +575,10 @@ ggplot(CrystalBox, aes(x = HP, y = ATK, size = Level)) +
             margin = margin(t = 0, r = 10, b = 0, l = 0)),
         axis.line = element_line(colour = "black", 
         linewidth = 1, linetype = "solid")) 
+ ```
+ ![HP by Attack and Level](docs/assets/images/unnamed-chunk-35-1.png?raw=true "Title")
   
-
+```{r warning=FALSE}
 ggplot(CrystalBox, aes(x = HP, y = SPA, size = Level)) + 
   geom_point() + 
   geom_line(linewidth = .75, color = "red") +
@@ -555,15 +598,15 @@ ggplot(CrystalBox, aes(x = HP, y = SPA, size = Level)) +
         axis.line = element_line(colour = "black", 
                                  linewidth = 1, linetype = "solid")) 
 ```
+![HP by Special Attack and Level](docs/assets/images/unnamed-chunk-35-2.png?raw=true "Title")
 
 ...
 
-### Different graphs showing correlation between offensive stats and speed
+## Correlation between offensive stats and speed
 
 ```{r warning=FALSE}
-
 ggplot(CrystalBox, aes(x = ATK, y = SPE, color = Gender)) +
-  ggtitle("Attack and Speed by Type") +
+  ggtitle("Attack and Speed by Gender") +
   xlab("Attack") +
   ylab("Speed") +
   theme(axis.text.x = element_text(angle = 30),
@@ -572,7 +615,10 @@ ggplot(CrystalBox, aes(x = ATK, y = SPE, color = Gender)) +
   geom_point() +
   scale_fill_continuous(type = "viridis") +
   geom_smooth(method = lm, se = FALSE)
+  ```
+![Attack and Speed by Gender](docs/assets/images/Attack%20and%20Speed%20by%20Gender.png?raw=true "Title")
 
+```{r warning =FALSE}
 ggplot(CrystalBox, aes(x = SPA, y = SPE, color = Gender)) +
   geom_jitter() +
   xlab("Special Attack") +
@@ -582,8 +628,12 @@ ggplot(CrystalBox, aes(x = SPA, y = SPE, color = Gender)) +
   theme(axis.text.x = element_text(angle = 30),
         axis.text.y = element_text(angle = 30)
   )
+```
 
-#Attack and Speed density plot
+![Speed by Special Attack and Gender](docs/assets/images/SpeAttack_byGender.png?raw=true "Title")
+
+## Attack and Speed density plot
+```{r warning=FALSE}
 ggplot(CrystalBox, aes(x = ATK, y = SPE)) +
   ggtitle("Density of Attack by Speed Stats") +
   xlab("Attack") +
@@ -608,6 +658,8 @@ ggplot(CrystalBox, aes(x = ATK, y = SPE)) +
     )),
   )
 ```
+![Speed and Attack Density](docs/assets/images/unnamed-chunk-34-3.png?raw=true "Title")
+
 
 ------------------------------------------------------------------------
 
@@ -624,19 +676,18 @@ Here we go!
 ```{r}
 # Subset main dataset
 CrystalBoxHM <-  subset(CrystalBox[,c(3:4,9:10,12:17,19,21:31)])
- 
-# Edit the source data set for use with the heatmap, as heatmaps can only be used with matrices containing
-# numeric variables
 ```
+Edit the source data set for use with the heatmap, as heatmaps can only be used with matrices containing numeric variables
 
 ```{r warning=FALSE}
  #Replace NAs with blank spaces for sum functions below
 
 CrystalBoxHM[,2] <- 
    replace(CrystalBoxHM$Type2,is.na(CrystalBoxHM$Type2),"")
+```
 
- 
- #Make Type columns
+```{r warning=FALSE}
+#Make Type columns
 
 CrystalBoxHM2 <- unique( CrystalBoxHM[ , 1 ] )
 CrystalBoxHM2 <- as.data.frame(CrystalBoxHM2)
@@ -649,9 +700,10 @@ CrystalBoxHM2 <- CrystalBoxHM2 %>% add_row(Type1 = "Flying")
 CrystalBoxHM2$Type2 = CrystalBoxHM2$Type1 #Run again
  
 #See above, since the main data set doesn't account for Flying types in Type 1 as they're no pure Flying types in all of Pokémon. 
- 
-#Make counts of Type 1 & 2 columns
- 
+```
+
+Make counts of Type 1 & 2 columns
+```{r warning=FALSE}
 CrystalBoxHM2$Type1_Count <-
    sapply(CrystalBoxHM2[,1], function(string) 
      sum(string == CrystalBoxHM[,1]))
@@ -659,18 +711,19 @@ CrystalBoxHM2$Type1_Count <-
 CrystalBoxHM2$Type2_Count <- 
    sapply(CrystalBoxHM2[,2], function(string) 
      sum(string == CrystalBoxHM[,2]))
+ ```
  
-#Edit row names for heatmap
-
+Edit row names for heatmap
+```{r warning=FALSE}
 row.names(CrystalBoxHM2) <- c("Psychic",  "Bug", "Normal", "Fire", 
                                     "Ground", "Water",  "Electric", 
                                     "Poison", "Dragon", "Ice", "Dark", 
                                     "Fighting", "Rock", "Steel",  "Grass", 
                                     "Ghost", "Flying")
+```
 
-#Make other columns for the matrix that the heatmap will be based on...
- 
- 
+Now we'll have to make the other columns for the matrix that the heatmap will be based on.
+```{r warning=FALSE} 
 #Make Type counts for the other data set we subsetted originally: 
  
 CrystalBoxHM$Type1_Count <-
@@ -681,7 +734,8 @@ CrystalBoxHM$Type1_Count <-
 CrystalBoxHM$Type2_Count <- 
    sapply(CrystalBoxHM[,2], function(string) 
      sum(string == CrystalBoxHM[,2]))
-
+```
+```{r warning=FALSE}
 #Splitting data, merging new datasets, summarizing and subsetting:  
  
 Type1_meanEXP <-
@@ -696,11 +750,13 @@ meanEXP2 <- merge(CrystalBoxHM2, Type1_meanEXP, by = 0, all = TRUE)
 meanEXP2 <-
    meanEXP2 %>% remove_rownames %>% 
    column_to_rownames(var = "Row.names") %>%  as.data.frame()
+```
 
-#Note above that we must change the row names to the types that will display in the heatmap, because remember, heatmaps can only be used with dataset that contain columns with only numeric properties. Row names are not affected by this. 
- 
-#Merge and null unneeded columns 
- 
+Note above that we must change the row names to the types that will display in the heatmap, because remember, heatmaps can only be used with dataset that contain columns with only numeric properties. Row names are not affected by this. 
+
+Merge and null unneeded columns 
+
+```{r warning=FALSE}
 meanEXP2[,1:2] <- NULL
  
 #New data with all the means we need
@@ -733,9 +789,10 @@ all_means[, 2] <- NULL
  
 all_means <-
    all_means %>% remove_rownames %>% column_to_rownames(var = "Type1") %>%  as.data.frame()
+ ```
 
-#Merge everything and fix row names: 
- 
+Merge everything and fix row names: 
+```{r warning=FALSE} 
 meanEXP2 <- merge(meanEXP2, all_means,  by = 0, all = TRUE)
 
 
@@ -746,9 +803,8 @@ meanEXP2 <-
 CrystalBoxHM3 <- meanEXP2 #I renamed the merged dataset to maintain consistency. 
 ```
 
+**The heatmap itself**
 ```{r warnings = FALSE}
-#The heatmap itself
- 
 par(cex.main = .85)
 
 heatmap(as.matrix(x = CrystalBoxHM3), scale="col", 
@@ -759,15 +815,19 @@ heatmap(as.matrix(x = CrystalBoxHM3), scale="col",
          xlab= "Aggregates", 
          ylab= "Type",
          cexCol=.75, col = cm.colors(256))
- 
-#Note how I edited the code to remove the column dendrogram from the chart. 
-```
+ ```
+
+![Aggregations by Type](docs/assets/images/unnamed-chunk-37-1.png?raw=true "Title")
+
+_Note how I edited the code to remove the column dendrogram from the chart._
+
+...
 
 # Outro
 
 When it comes to the intricate details of Pokémon, you'll start to unravel many layers to a game that seems rather innocuous on the outside.
 
-Frankly, when I started to delve deeper and deconstruct one of my all-time favorite games in this manner; it took a good amount of self-reflection. Data is certainly something I find passion in doing well, but sometimes when it comes to games-----the fun comes in the mystery that comes with discovering novel things, and joy that is found in the experience you have in the present moment.
+Frankly, when I started to delve deeper and deconstruct one of my all-time favorite games in this manner; it took a good amount of self-reflection. Data is certainly something I find passion in doing well, but sometimes when it comes to games-----the fun comes in the mystery that comes with discovering novel things, and the joy that is found in the experience you have in the present moment.
 
 While the fun of my childhood self playing Pokémon will always be seeped in nostalgia, through finding novel experiences via my pursuits in data and uncovering useful insights---I hope that can give me a similar feeling in my adult life.
 
