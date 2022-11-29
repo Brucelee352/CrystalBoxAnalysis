@@ -6,6 +6,30 @@ date: "11/11/2022"
 output: github_document 
 ---
 
+# Table of contents
+[Introduction](#introduction)
+  - [Starting the EDA process](#starting-the-eda-process)
+  - [Digging a little deeper](#digging-a-little-deeper)
+    - [What does the view from the top look like?](#what-does-the-view-from-the-top-look-like)
+- [Stats](#stats)
+  - [A Quick Explanation of "Hidden Stats"](#a-quick-explanation-of-hidden-stats)
+    - [What Accounts for Power?](#what-accounts-for-power)
+    - [Strongest of the Strong](#strongest-of-the-strong)
+      - [A quick primer on Base Stats (BST)](#a-quick-primer-on-base-stats-bst)
+    - [The Definitive Answer](#the-definitive-answer)
+- [Example Data Visualizations](#example-data-visualizations)
+  - [One variable, discrete variables](#one-variable-discrete-variables)
+  - [One variable, continuous](#one-variable-continuous)
+  - [Two variable plots](#two-variable-plots)
+  - [Sample violin plot, with quantiles.](#sample-violin-plot-with-quantiles)
+  - [Line graphs showing correlation between Hit points and offensive stats by level](#line-graphs-showing-correlation-between-hit-points-and-offensive-stats-by-level)
+  - [Correlation between offensive stats and speed](#correlation-between-offensive-stats-and-speed)
+  - [Attack and Speed density plot](#attack-and-speed-density-plot)
+    - [Heatmap](#heatmap)
+- [Outro](#outro)
+
+...
+
 # Introduction
 
 This is probably the nerdiest thing you'll ever read about Pokémon.
