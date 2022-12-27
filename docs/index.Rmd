@@ -22,7 +22,7 @@ output:
 
 ---
 
-Go to [about page](about.md)
+Go to [about page](about.rmd)
 
 # Introduction
 
