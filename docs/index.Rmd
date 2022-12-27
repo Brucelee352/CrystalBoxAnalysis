@@ -1,3 +1,5 @@
+Go to [about page](about.md)
+
 ---
 title: "My Pokémon Boxes — Exporatory Data Analysis"
 subtitle: "My grand tour around Johto and Kanto"
