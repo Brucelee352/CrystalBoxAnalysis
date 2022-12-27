@@ -3,10 +3,22 @@ title: "My Pokémon Boxes — Exporatory Data Analysis"
 subtitle: "My grand tour around Johto and Kanto"
 author: "Bruce A. Lee"
 date: "11/11/2022"
-output: html_document
-toc: true
-toc_float: true
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
 ---
+
+<style>
+    .main-content, .toc {
+      max-width: 90rem;
+      padding: 2rem 4rem;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+</style>
 
 ---
 
@@ -154,7 +166,7 @@ CrystalBox <- read.csv(file = "Data/CrystalBoxData3.csv",
 
 ...
 
-### What does the view from the top look like?
+### View from the top
 
 $~$
 
