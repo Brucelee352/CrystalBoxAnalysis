@@ -1,5 +1,5 @@
 # Build Settings
-markdown: kramdown
+markdown: GFM
 theme: jekyll-theme-minimal
 title: Bruce A. Lee
 description: Data Analyst Portfolio 
