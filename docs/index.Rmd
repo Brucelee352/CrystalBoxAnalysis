@@ -634,7 +634,7 @@ ggplot(CrystalBox, aes(x = HP, y = SPA, size = Level)) +
 
 ...
 
-### Different graphs showing correlation between offensive stats and speed
+###Correlatory graphs on offensive stats and speeds
 
 ```{r warning=FALSE}
 
