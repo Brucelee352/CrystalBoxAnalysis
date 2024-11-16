@@ -9,3 +9,6 @@ As a represenation of a trainer's journey, the Pokémon contained in your boxes 
 this have been with me since my beginnings as a Pokémon trainer, and in my 30s, I proudly share with you the fruits of a destination seldom braved. 
 
 Please see the full blog version here: [The Strongest of the Pocket Monsters!](https://brucelee352.github.io/projects/2023/05/04/pkmn-box-analysis.html)
+
+### Update
+This repository is now archived and discontinued. 
